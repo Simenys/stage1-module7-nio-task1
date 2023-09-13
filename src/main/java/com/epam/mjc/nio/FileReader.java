@@ -1,13 +1,15 @@
 package com.epam.mjc.nio;
 
 import java.io.*;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class FileReader {
 
 
     public Profile getDataFromFile(File file) {
+        Logger logger = Logger.getLogger(FileReader.class.getName());
         String name = "";
         String age = "";
         String email = "";
@@ -18,7 +20,7 @@ public class FileReader {
             email = reader.readLine();
             phone = reader.readLine();
         } catch (IOException e) {
-            System.err.println("File opening failed: " + e);
+            logger.log(Level.WARNING, "Exception error");
         }
 
 
