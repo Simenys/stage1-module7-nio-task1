@@ -17,22 +17,18 @@ public class FileReader {
             age = reader.readLine();
             email = reader.readLine();
             phone = reader.readLine();
-        } catch (IOException e) {
+        } catch (IOException ignored) {
 
         }
 
 
         String nameTrim = name.substring(name.indexOf(":") + 2);
-//        nameTrim.trim();
 
         String ageTrim = age.substring(age.indexOf(":") + 2);
-//        ageTrim.trim();
 
         String emailTrim = email.substring(email.indexOf(":") + 2);
-//        emailTrim.trim();
 
         String phoneTrim = phone.substring(phone.indexOf(":") + 2);
-//        phoneTrim.trim();
 
         return new Profile(nameTrim.trim(), Integer.parseInt(ageTrim.trim()), emailTrim.trim(), Long.parseLong(phoneTrim.trim()));
     }
