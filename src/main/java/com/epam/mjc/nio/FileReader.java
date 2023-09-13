@@ -18,7 +18,7 @@ public class FileReader {
             email = reader.readLine();
             phone = reader.readLine();
         } catch (IOException ignored) {
-
+            System.out.println("Exception error");
         }
 
 
