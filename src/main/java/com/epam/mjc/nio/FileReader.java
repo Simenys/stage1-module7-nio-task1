@@ -17,8 +17,8 @@ public class FileReader {
             age = reader.readLine();
             email = reader.readLine();
             phone = reader.readLine();
-        } catch (IOException ignored) {
-            System.err.println("Exception error");
+        } catch (IOException e) {
+            System.err.println("File opening failed: " + e);
         }
 
 
