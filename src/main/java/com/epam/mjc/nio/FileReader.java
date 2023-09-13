@@ -23,17 +23,17 @@ public class FileReader {
 
 
         String nameTrim = name.substring(name.indexOf(":") + 2);
-        nameTrim.trim();
+//        nameTrim.trim();
 
         String ageTrim = age.substring(age.indexOf(":") + 2);
-        ageTrim.trim();
+//        ageTrim.trim();
 
         String emailTrim = email.substring(email.indexOf(":") + 2);
-        emailTrim.trim();
+//        emailTrim.trim();
 
         String phoneTrim = phone.substring(phone.indexOf(":") + 2);
-        phoneTrim.trim();
+//        phoneTrim.trim();
 
-        return new Profile(nameTrim, Integer.parseInt(ageTrim), emailTrim, Long.parseLong(phoneTrim));
+        return new Profile(nameTrim.trim(), Integer.parseInt(ageTrim.trim()), emailTrim.trim(), Long.parseLong(phoneTrim.trim()));
     }
 }
